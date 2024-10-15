@@ -14,6 +14,9 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - type: looking-glass-kvmfr-akmod
+    options: true
     
   - type: rpm-ostree
     repos:
@@ -32,9 +35,6 @@ modules:
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       # - firefox
       # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-
-      kargs:
-      - --append-if-missing="hid_apple.fnmode=2"
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
