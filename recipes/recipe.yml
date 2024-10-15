@@ -21,6 +21,17 @@ modules:
     install:
       # - micro
       # - starship
+      - qemu-kvm 
+      - qemu-system 
+      - qemu-utils 
+      - python3 
+      - python3-pip 
+      - libvirt-clients 
+      - libvirt-daemon-system 
+      - bridge-utils 
+      - virtinst 
+      - libvirt-daemon 
+      - virt-manager
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
